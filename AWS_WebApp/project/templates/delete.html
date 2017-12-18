@@ -1,0 +1,11 @@
+{% extends "welcome.html" %}
+{% block content %}
+  <div class="delete">
+    <h2>Delete file</h2>
+<form action="/deleteComplete" method="POST">
+  File name*:
+  <input type="text" name="filename" value="" required>
+  <input type="submit" value="Delete">
+</form>
+  </div>
+{% endblock %}

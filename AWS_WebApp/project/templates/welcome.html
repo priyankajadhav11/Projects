@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+	<style>
+	ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #333;
+	}
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+li {
+    float: left;
+	}
+	</style>
+        <h1>Welcome to AWS Storage service</h1>
+          <ul>
+            <li><a href="{{ url_for('upload') }}">Upload</a></li>
+            <li><a href="{{ url_for('download') }}">Download</a></li>
+	    <li><a href="{{ url_for('delete') }}">Delete</a></li>
+            <li><a href="{{ url_for('list') }}">List</a></li>
+	     <li><a href="{{ url_for('logout') }}">LogOut</a></li>
+          </ul>
+		  <font color="red"><b>{{message}}</b></font>
+    </header>
+    <div>
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

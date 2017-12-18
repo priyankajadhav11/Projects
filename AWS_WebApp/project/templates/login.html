@@ -1,0 +1,29 @@
+<html>
+<body>
+ <div>
+   <h2>Upload</h2>
+   <form id="upload_form" action="/upload" method="POST" enctype="multipart/form-data">
+      <input type="file" name="file" accept="uploaded_files/*" multiple>
+      <input type="submit" name="upload" value="Upload">
+   </form>
+   <hr>
+   <h2>Download</h2>
+   <form id="download_form" action="/download" method="POST">
+     File Name: <input type="text" name="filename" placeholder="Enter file name"><br><br>
+     <input type="submit" name="download" value="Download">
+   </form>
+   <hr>
+   <h2>Delete</h2>
+   <form id="delete_form" action="/delete" method="POST">
+     File Name: <input type="text" name="filename" placeholder="Enter file name"><br><br>
+     <input type="submit" name="delete" value="Delete">
+   </form>
+   <hr>
+   <h1>List</h1>
+   <form id="list_form" action="/list" method="POST">
+     <input type="submit" name="list" value="List">
+   </form>
+   <hr>
+  </div>
+ </body>
+</html>
