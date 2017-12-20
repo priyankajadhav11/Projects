@@ -5,8 +5,8 @@ import json
 import boto3
 from flask import Flask, render_template, request,make_response,session
 app = Flask(__name__)
-s3 = boto3.resource('s3',aws_access_key_id = 'AKIAI3KOSZRHWY6AAHUQ',
-        aws_secret_access_key = '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',config= boto3.session.Config(signature_version='s3v4'))
+s3 = boto3.resource('s3',aws_access_key_id = 'ACCESSID',
+        aws_secret_access_key = 'SECRESTKEY',config= boto3.session.Config(signature_version='s3v4'))
 app.secret_key='any string'
 @app.route('/')
 def hello_world():
