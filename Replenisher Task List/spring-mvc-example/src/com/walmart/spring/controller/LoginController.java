@@ -32,19 +32,10 @@ public class LoginController {
 	  public TaskDaoImpl taskService;
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		System.out.println("Home Page Requested, locale = " + locale);
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-
-		String formattedDate = dateFormat.format(date);
-
-		model.addAttribute("serverTime", formattedDate);
-
 		return "home";
 	}
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String homePage(Locale locale, Model model) {
-		System.out.println("Home Page Requested, locale = " + locale);
 		return "home";
 	}
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
